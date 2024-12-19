@@ -33,4 +33,9 @@
 
 // //Интерполяция
 // console.log(`Привет, вот число ${a}`)
+const a = true
+const b = true
+if (a && b) {
+    console.log('ew')
+}
 

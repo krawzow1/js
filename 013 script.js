@@ -21,21 +21,21 @@
 
 Проверить, чтобы все работало без ошибок в консоли */
 
-'use strict';
+// 'use strict';
 
-let numberOfFilms = +prompt('Сколько фильмов Вы уже посмотрели?','');
-console.log(typeof(numberOfFilms));
+// let numberOfFilms = +prompt('Сколько фильмов Вы уже посмотрели?','');
+// console.log(typeof(numberOfFilms));
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
-let numberOfFilms1 = prompt('Один из последних просмотренных фильмов?','');
-let numberOfFilms2 = prompt('На сколько оцените его?','');
-personalMovieDB.movies[numberOfFilms1] = numberOfFilms2
-console.log(personalMovieDB)
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
+// let numberOfFilms1 = prompt('Один из последних просмотренных фильмов?','');
+// let numberOfFilms2 = prompt('На сколько оцените его?','');
+// personalMovieDB.movies[numberOfFilms1] = numberOfFilms2
+// console.log(personalMovieDB)
 
 //console.log(personalMovieDB['privat'], personalMovieDB.count)
