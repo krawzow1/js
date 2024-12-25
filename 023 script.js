@@ -30,6 +30,14 @@ const personalMovieDB = {
 };
 
 
+function showMyDB(obj) {
+    if (obj['privat'] == false) {
+        return console.log(obj)
+    }
+}
+
+showMyDB(personalMovieDB);
+
 
 function rememberMyFilms() {
     for (let i = 0; i < 2; i++) {
@@ -57,3 +65,15 @@ function detectetLevelPerson() {
 }
 
 detectetLevelPerson();
+
+function writeYourGenres(obj) {
+    for (let i = 0; i <= 2; i++) {
+        let a = prompt(`Ваш любимый жанр под номером ${i + 1}`,'')
+        if (a != '' && a != null) {
+            obj.genres[i] = a;
+        } else {
+            i--;
+        }
+    }
+}
+writeYourGenres(personalMovieDB);

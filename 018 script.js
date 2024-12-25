@@ -12,37 +12,37 @@
 
 4) Потренироваться и переписать цикл еще двумя способами*/
 
-'use strict';
+// 'use strict';
 
-let numberOfFilms = +prompt('Сколько фильмов Вы уже посмотрели?','');
-console.log(typeof(numberOfFilms));
+// let numberOfFilms = +prompt('Сколько фильмов Вы уже посмотрели?','');
+// console.log(typeof(numberOfFilms));
 
-const personalMovieDB = {
-    count: numberOfFilms,
-    movies: {},
-    actors: {},
-    genres: [],
-    privat: false
-};
+// const personalMovieDB = {
+//     count: numberOfFilms,
+//     movies: {},
+//     actors: {},
+//     genres: [],
+//     privat: false
+// };
 
-for (let i = 0; i < 2; i++) {
-    let a = prompt(`Один из последних просмотренных фильмов? ${i+1}`,''),
-        b = prompt('На сколько оцените его?','');
+// for (let i = 0; i < 2; i++) {
+//     let a = prompt(`Один из последних просмотренных фильмов? ${i+1}`,''),
+//         b = prompt('На сколько оцените его?','');
 
-    if (a != null && a != "" && b != null && b != "" && a.length < 50) {
-        personalMovieDB.movies[a] = b;
-    } else {
-        i--;
-    }
-}
+//     if (a != null && a != "" && b != null && b != "" && a.length < 50) {
+//         personalMovieDB.movies[a] = b;
+//     } else {
+//         i--;
+//     }
+// }
 
-console.log(personalMovieDB)
-if (0 <= personalMovieDB.count && personalMovieDB.count < 10) {
-    alert("Просмотрено довольно мало фильмов");
-} else if (10 <= personalMovieDB.count && personalMovieDB.count <= 30) {
-    alert("Вы классический зритель");
-} else if (personalMovieDB.count > 30) {
-    alert('Вы киноман');
-} else {
-    alert('Ошибка');
-}
+// console.log(personalMovieDB)
+// if (0 <= personalMovieDB.count && personalMovieDB.count < 10) {
+//     alert("Просмотрено довольно мало фильмов");
+// } else if (10 <= personalMovieDB.count && personalMovieDB.count <= 30) {
+//     alert("Вы классический зритель");
+// } else if (personalMovieDB.count > 30) {
+//     alert('Вы киноман');
+// } else {
+//     alert('Ошибка');
+// }
