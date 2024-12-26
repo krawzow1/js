@@ -39,3 +39,32 @@
 //     console.log('ew')
 // }
 
+
+//Пытаюсь создать объект и перебрать его ключи и значения
+const obj = {
+    name: 'Ilya',
+    age: 26,
+    others: {
+        width: 60,
+        height: 173
+    },
+    f: function() {
+        console.log('Metod')
+    }
+}
+
+for (let key in obj) {
+    if (typeof obj[key] === 'object') {
+        for (let i in obj[key]) {
+            console.log(`${i}: ${obj[key][i]}`)
+        } 
+    } else {
+        console.log(`${key}: ${obj[key]}`)
+    }
+}
+obj.f()
+console.log(Object.keys(obj).length)
+
+//деструктуризация
+const {widt,heigh} = obj.others //переменный должны также называться, как в объекте
+console.log(widt,heigh)
