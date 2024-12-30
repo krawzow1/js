@@ -67,4 +67,4 @@ console.log(Object.keys(obj).length)
 
 //деструктуризация
 const {widt,heigh} = obj.others //переменный должны также называться, как в объекте
-console.log(widt,heigh)
+console.log(widt,heigh)git
