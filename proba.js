@@ -159,5 +159,3 @@
 
 
  //start 31 lesson
- kuuuu
- 12121
