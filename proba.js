@@ -158,4 +158,6 @@
 
 
 
- //start 31 lesson
+ //start 36 lesson
+const query = document.querySelectorAll('div')
+console.log(query)
