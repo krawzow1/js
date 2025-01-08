@@ -1,3 +1,4 @@
+;
 // let a = 5;
 // console.log(a);
 
@@ -22,10 +23,10 @@
 // // добавляю сразу 10-й эл. Это приводит к тому, что 
 // // с 3 ро 9-й индекс будут undefined элементы
 // console.log(arr);
-///alert('FDFD');
-//const question = confirm('Ты гей?') // форма с ответом Да/Нет, который можно сохранить
-//alert(question)
-//console.log(question)
+// //alert('FDFD');
+// const question = confirm('Ты гей?') // форма с ответом Да/Нет, который можно сохранить
+// alert(question)
+// console.log(question)
 
 // const answer = prompt('То, что введешь сейчас - будет строкой','123')
 // const answerint = +prompt('То, что введешь сейчас - будет числом','321')
@@ -40,7 +41,7 @@
 // }
 
 
-//Пытаюсь создать объект и перебрать его ключи и значения
+// // Пытаюсь создать объект и перебрать его ключи и значения
 // const obj = {
 //     name: 'Ilya',
 //     age: 26,
@@ -90,7 +91,7 @@
 // console.log(NaN == true)
 // console.log(null == undefined)
 
-//start 29 lesson
+// start 29 lesson
 
 
 // const obj = {
@@ -131,9 +132,9 @@
 // obj6['b'] = 666
 // console.log('qqq',obj6)
 
-//end 29 lesson
+// end 29 lesson
 
-//start 30 lesson
+// start 30 lesson
 //  const oop = { //создали объект
 //     a: 100,
 //     b: 300,
@@ -154,10 +155,111 @@
 //  Object.setPrototypeOf(oopN,oopNasled) //устанавливает прототип тогда, когда уже oopN существовал!!!!
 //  console.log(oopN.c())
 
- //end lesson 30
+//  end lesson 30
 
 
 
- //start 36 lesson
-const query = document.querySelectorAll('div')
-console.log(query)
+//  start 36 lesson
+// const query = document.querySelectorAll('div')
+// console.log(query)
+
+// start lesson 39
+// const btn = document.querySelector('.second')
+// btn.addEventListener('click', () => {
+//     console.log('Click')
+// })
+// btn.addEventListener('mouseenter', (e) => {
+//     console.log('Навели мышку',e.target) //e - это событие, у него есть различные св-ва
+//     // напр. target возвращает сам объект, на котором произошло событие
+//     // e.target.remove() //удаляет этот объект
+// })
+
+// btn.removeEventListener('click', call-back) //удаляет слушатель по клику
+
+// const link = document.querySelector('a')
+// link.addEventListener('click', e => {
+//     e.preventDefault()
+// })
+
+
+// start lesson 40
+// const element = document.head;
+// const children = element.children;;
+// console.log(children)
+
+
+// start 41 lesson
+let students = {
+    js: [{
+        name: 'John',
+        progress: 100
+    }, {
+        name: 'John1',
+        progress: 60
+    }],
+
+    html: {
+        basic: [{
+            name: 'John2',
+            progress: 20
+        }, {
+            name: 'John3',
+            progress: 18
+        }],
+
+        pro: [{
+            name: 'John4',
+            progress: 10
+        }]
+    }
+}
+
+// function getTotalProgressByIteration(data) {
+//     let total = 0
+//     let students = 0 
+
+//     for (let course of Object.values(data)) {
+//         if (Array.isArray(course)) {
+//             students += course.length
+//             for (let i = 0; i < course.length; i++) {
+//                 total += course[i].progress
+//             }
+//         } else {
+//             for (let el of Object.values(course)) {
+//                 if (Array.isArray(el)) {
+//                     students += el.length
+//                     for (let i = 0; i < el.length; i++) {
+//                         total += el[i].progress
+//                     }
+//                 }
+//             }
+//         }
+//     }
+//     return total/students
+// }
+
+// const a = getTotalProgressByIteration(students)
+// console.log(a)
+
+
+// пробую переписать в рекурсию
+function getTotalProgressByRecursion(data) {
+    let total = 0
+    let students = 0 
+
+    for (let course of Object.values(data)) {
+        if (Array.isArray(course)) {
+            students += course.length
+            for (let i = 0; i < course.length; i++) {
+                total += course[i].progress
+            }
+        } else {
+            getTotalProgressByRecursion(course)
+            }
+           
+    }
+    return [total,students]
+}
+const b = getTotalProgressByRecursion(students)
+console.log(b)
+    
