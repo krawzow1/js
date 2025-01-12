@@ -244,22 +244,26 @@ let students = {
 
 // пробую переписать в рекурсию
 function getTotalProgressByRecursion(data) {
-    let total = 0
-    let students = 0 
+    if (Array.isArray(data)) {
+        let total = 0
 
-    for (let course of Object.values(data)) {
-        if (Array.isArray(course)) {
-            students += course.length
-            for (let i = 0; i < course.length; i++) {
-                total += course[i].progress
-            }
-        } else {
-            getTotalProgressByRecursion(course)
-            }
-           
+        for (let i = 0; i < data.length; i++) {
+            total += data[i].progress
+        }
+
+        return [total, data.length]
+    } else {
+        let total = [0,0]
+            
+        for (let subData of Object.values(data)) {
+            const subDataArr = getTotalProgressByRecursion(subData)
+            total[0] += subDataArr[0]
+            total[1] += subDataArr[1]
+        }
+        return total 
     }
-    return [total,students]
+    
 }
 const b = getTotalProgressByRecursion(students)
-console.log(b)
+console.log(b[0]/b[1])
     
